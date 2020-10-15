@@ -70,45 +70,53 @@ profesores, videos y páginas web</p>
 
 <h2>Pseudocodigo</h2>
 <p>
-    cortar()
-    sem_post(mezclar)
 
-    sem_wait(sem_mezclar)
+    cortar()
+    signal(mezclar)
+
+    wait(sem_mezclar)
     mezclar()
-    sem_post(salar)
+    signal(salar)
 
     mutex_lock(sem_sal)
     salar()
-    sem_wait(sem_salar)
+    wait(sem_salar)
     mutex_unlock(sem_sal)
-    sem_post(sem_armar)
+    signal(sem_armar)
 
-    sem_wait(sem_armar)
+    wait(sem_armar)
     armar()
-    sem_post(sem_cocinar)
+    signal(sem_cocinar)
 
 
     mutex_lock(sem_cocinar)
     cocinar()
-    sem_wait(sem_cocinar)
+    wait(sem_cocinar)
     mutex_unlock(sem_cocinar)
-    sem_post(sem_hornear)
+    signal(sem_hornear)
 
 
     mutex_lock(sem_hornear)
     hornear()
-    sem_wait(sem_hornear)
+    wait(sem_hornear)
     mutex_unlock(sem_hornear)
-    sem_post(sem_cortarExtras)
+    signal(sem_cortarExtras)
 
-    sem_wait(sem_cortarExtras)
+    wait(sem_cortarExtras)
     cortarExtras()
-    sem_post(sem_armarHamburguesa)
+    signal(sem_armarHamburguesa)
 
 
-    sem_wait(sem_armarHamburguewsa)
+    wait(sem_armarHamburguewsa)
     armarHamburguesa()
-    ganador
+     wait(sem_mezclar)
+     wait(sem_salar)
+     wait(sem_armar)
+     wait(sem_cocinar)
+     wait(sem_hornear)
+     wait(sem_cortarExtras)
+
+
 
 </p>
 </body>
