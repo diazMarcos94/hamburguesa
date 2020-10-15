@@ -68,5 +68,48 @@ desconocía, y la principal dificultad fue en la lectura del .txt y en enviar el
 archivo el cual se debería crear, la solución la obtuve mediante asesoramiento de los
 profesores, videos y páginas web</p>
 
+<h2>Pseudocodigo</h2>
+<p>
+    cortar()
+    sem_post(mezclar)
+
+    sem_wait(sem_mezclar)
+    mezclar()
+    sem_post(salar)
+
+    mutex_lock(sem_sal)
+    salar()
+    sem_wait(sem_salar)
+    mutex_unlock(sem_sal)
+    sem_post(sem_armar)
+
+    sem_wait(sem_armar)
+    armar()
+    sem_post(sem_cocinar)
+
+
+    mutex_lock(sem_cocinar)
+    cocinar()
+    sem_wait(sem_cocinar)
+    mutex_unlock(sem_cocinar)
+    sem_post(sem_hornear)
+
+
+    mutex_lock(sem_hornear)
+    hornear()
+    sem_wait(sem_hornear)
+    mutex_unlock(sem_hornear)
+    sem_post(sem_cortarExtras)
+
+    sem_wait(sem_cortarExtras)
+    cortarExtras()
+    sem_post(sem_armarHamburguesa)
+
+
+    sem_wait(sem_armarHamburguewsa)
+    armarHamburguesa()
+    ganador
+
+</p>
 </body>
 </html>
